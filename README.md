@@ -16,8 +16,6 @@ Fully asynchronous WS2812 library for CYBEROS.
 
 ## Usage
 
-### Default:
-
 ```Python
 from machine import Pin
 import uasyncio as asyncio
