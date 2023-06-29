@@ -11,7 +11,7 @@
 # Features:
 # - Completely asynchronous.
 # - 8 pre-defined colors.
-# - Brightness control.
+# - Adjustable brightness.
 
 from machine import bitstream
 
@@ -68,17 +68,17 @@ class NeoPixel:
     ################################################################################
     # Tasks
     #
-    async def set_color(self, rgb=None):
-        if rgb is None:
+    async def set_color(self, index=0, color=None):
+        if color is None:
             r = int(self._rgb[0] * self._brightness)
             g = int(self._rgb[1] * self._brightness)
             b = int(self._rgb[2] * self._brightness)
         else:
-            self._rgb = rgb
-            r = int(rgb[0] * self._brightness)
-            g = int(rgb[1] * self._brightness)
-            b = int(rgb[2] * self._brightness)
-        self.__setitem__(0, (r, g, b))
+            self._rgb = color
+            r = int(color[0] * self._brightness)
+            g = int(color[1] * self._brightness)
+            b = int(color[2] * self._brightness)
+        self.__setitem__(index, (r, g, b))
         await self.write()
 
     async def set_brightness(self, value):
