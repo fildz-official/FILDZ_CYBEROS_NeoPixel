@@ -29,6 +29,15 @@ class NeoPixel:
     C_PURPLE = (165, 0, 255)
     C_WHITE = (255, 255, 255)
     C_BLANK = (0, 0, 0)
+    COLORS = (
+        ('R', C_RED),
+        ('O', C_ORANGE),
+        ('Y', C_YELLOW),
+        ('G', C_GREEN),
+        ('A', C_AQUA),
+        ('B', C_BLUE),
+        ('P', C_PURPLE),
+        ('W', C_WHITE))
 
     def __init__(self, pin, n, bpp=3, timing=1):
         self.pin = pin
