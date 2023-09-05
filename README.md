@@ -10,8 +10,8 @@ Fully asynchronous WS2812 library for CYBEROS.
 
 ## Setup
 
-1. Download and extract .zip file contents to "fildz_neopixel" folder.
-2. Upload "fildz_neopixel" folder to your MicroPython powered device.
+1. Download and extract .zip file contents to fildz_neopixel folder.
+2. Upload fildz_neopixel folder to your MicroPython powered device.
 
 ## Usage
 
